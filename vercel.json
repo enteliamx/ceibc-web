@@ -1,0 +1,41 @@
+{
+  "cleanUrls": true,
+  "trailingSlash": false,
+  "redirects": [
+    {
+      "source": "/curso",
+      "destination": "/curso-examen-uabc",
+      "permanent": true
+    },
+    {
+      "source": "/tijuana",
+      "destination": "/curso-examen-uabc-tijuana",
+      "permanent": true
+    },
+    {
+      "source": "/mexicali",
+      "destination": "/curso-examen-uabc-mexicali",
+      "permanent": true
+    },
+    {
+      "source": "/diagnostico",
+      "destination": "/diagnostico-exies",
+      "permanent": true
+    }
+  ],
+  "headers": [
+    {
+      "source": "/(.*)",
+      "headers": [
+        {
+          "key": "X-Content-Type-Options",
+          "value": "nosniff"
+        },
+        {
+          "key": "Referrer-Policy",
+          "value": "strict-origin-when-cross-origin"
+        }
+      ]
+    }
+  ]
+}
