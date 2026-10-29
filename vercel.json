@@ -3,6 +3,11 @@
   "trailingSlash": false,
   "redirects": [
     {
+      "source": "/whatsapp",
+      "destination": "https://wa.me/526644901395",
+      "permanent": false
+    },
+    {
       "source": "/curso",
       "destination": "/curso-examen-uabc",
       "permanent": true

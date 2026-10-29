@@ -1,5 +1,6 @@
 User-agent: *
 Allow: /
+Disallow: /whatsapp
 
 Sitemap: https://www.ceibc.mx/sitemap.xml
 # Mapa para motores de IA: https://www.ceibc.mx/llms.txt

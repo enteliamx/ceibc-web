@@ -14,7 +14,7 @@
 
   // Click en WhatsApp como evento
   document.addEventListener('click', function(e){
-    var a = e.target.closest && e.target.closest('a[href*="wa.me"]');
+    var a = e.target.closest && e.target.closest('a[href*="wa.me"], a[href^="/whatsapp"]');
     if (a && window.gtag) {
       window.gtag('event', 'whatsapp_click', { link_url: a.href, page_path: location.pathname });
     }
