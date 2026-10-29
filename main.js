@@ -1,6 +1,6 @@
 (function(){
   // GA4: poner el ID de medición aquí (Etapa 4)
-  var GA_ID = '';
+  var GA_ID = 'G-7YWJ4PGFQD';
   if (GA_ID) {
     var s = document.createElement('script');
     s.async = true;
