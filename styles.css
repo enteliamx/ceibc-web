@@ -235,3 +235,39 @@ h3{font-size:1.2rem;line-height:1.25;margin:0 0 8px}
 .wa:hover{color:#fff;background:#1fb457}
 .wa svg{width:22px;height:22px}
 @media (max-width:520px){.wa span{display:none}.wa{padding:14px}}
+
+/* Preventa (se apaga sola despues del 30 de noviembre via main.js) */
+.solo-regular{display:none}
+.promo-fin .solo-promo{display:none}
+.promo-fin .solo-regular{display:inline}
+.promo-fin .promo-strip{display:none}
+.promo-strip{background:var(--ink);color:var(--crema);font-size:.92rem;text-align:center;padding:9px 0}
+.promo-strip b{color:var(--lima);font-weight:700}
+.promo-strip a{color:var(--lima);font-weight:700;margin-left:6px;white-space:nowrap}
+.promo{background:var(--ink);color:var(--crema);position:relative;overflow:hidden}
+.promo::before{content:"";position:absolute;left:-70px;bottom:-70px;width:260px;height:260px;background:rgba(204,214,43,.09);-webkit-mask:var(--brillo) center/contain no-repeat;mask:var(--brillo) center/contain no-repeat}
+.promo-grid{display:grid;grid-template-columns:1fr 1.05fr;gap:56px;align-items:center;position:relative}
+.promo-tag{display:inline-block;margin:0 0 14px;padding:5px 14px;border:1.5px solid var(--lima);border-radius:999px;color:var(--lima);font-size:.88rem;font-weight:600}
+.promo h2{max-width:13em}
+.promo-copy p{color:#d6dbd6;max-width:30em;margin:0 0 28px}
+.promo-copy strong{color:var(--crema)}
+.tickets{display:grid;grid-template-columns:1fr 1fr;gap:18px}
+.ticket{position:relative;background:var(--crema);color:var(--ink);border-radius:18px;padding:22px 22px 24px;display:flex;flex-direction:column;
+  -webkit-mask:radial-gradient(circle 11px at 0 calc(100% - 56px),transparent 98%,#000) left/51% 100% no-repeat,radial-gradient(circle 11px at 100% calc(100% - 56px),transparent 98%,#000) right/51% 100% no-repeat;
+  mask:radial-gradient(circle 11px at 0 calc(100% - 56px),transparent 98%,#000) left/51% 100% no-repeat,radial-gradient(circle 11px at 100% calc(100% - 56px),transparent 98%,#000) right/51% 100% no-repeat}
+.ticket::after{content:"";position:absolute;left:18px;right:18px;bottom:56px;border-top:2px dashed var(--linea)}
+.t2{background:var(--lima)}
+.t2::after{border-top-color:rgba(30,37,34,.22)}
+.t-label{font-weight:700;font-size:.95rem}
+.t-was{color:var(--gris);text-decoration:line-through;text-decoration-color:var(--coral);text-decoration-thickness:2px;font-size:1.05rem;margin-top:6px}
+.t2 .t-was{color:#4a5236}
+.t-now{font-family:var(--display);font-size:clamp(2.8rem,5vw,3.8rem);font-weight:700;line-height:1;letter-spacing:-.03em;margin-top:2px}
+.t-unit{font-size:.88rem;margin-top:auto;padding-top:40px}
+.ticket{min-height:236px}
+.ticket:not(.t2)::before{content:"pago único";position:absolute;left:22px;bottom:24px;font-size:.88rem}
+.t-sello{position:absolute;top:14px;right:14px;width:74px;height:74px;border-radius:50%;display:grid;place-content:center;text-align:center;background:var(--coral);color:var(--crema);font-family:var(--display);font-weight:700;font-size:1.3rem;line-height:.95;transform:rotate(10deg);box-shadow:inset 0 0 0 4px var(--coral),inset 0 0 0 5.5px rgba(255,248,235,.75)}
+.t-sello small{font-family:var(--texto);font-size:.62rem;font-weight:600;letter-spacing:.02em}
+.t-nota{grid-column:1/-1;margin:2px 0 0;font-size:.88rem;color:#c9cfc9}
+.promo-fin .t-was{text-decoration:none;color:var(--ink);font-family:var(--display);font-size:clamp(2.8rem,5vw,3.8rem);font-weight:700;line-height:1;letter-spacing:-.03em}
+@media (max-width:860px){.promo-grid{grid-template-columns:1fr;gap:36px}}
+@media (max-width:460px){.tickets{grid-template-columns:1fr}.ticket{min-height:200px}.promo-strip{font-size:.85rem;padding:8px 12px}}

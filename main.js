@@ -12,6 +12,11 @@
     window.gtag('config', GA_ID);
   }
 
+  // Preventa: se apaga sola al terminar el 30 de noviembre de 2026 (hora de Tijuana)
+  if (Date.now() >= Date.parse('2026-12-01T00:00:00-08:00')) {
+    document.documentElement.classList.add('promo-fin');
+  }
+
   // Click en WhatsApp como evento
   document.addEventListener('click', function(e){
     var a = e.target.closest && e.target.closest('a[href*="wa.me"], a[href^="/whatsapp"]');
